@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+            url(5157852.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            }
+            .CARD_CARD
+            {
+                position: absolute !important;
+                top: 100px !important;
+                border: 5px solid rgb(61, 53, 53);
+                border-radius: 50px !important;
+            }
+            .card-header{
+                background-image: linear-gradient(rgb(180, 141, 166),rgb(254, 152, 169));
+                border-radius: 45px 45px 0px 0px  !important;
+                border-bottom: 1px solid rgb(55, 48, 48);}
+            .card-footer{
+                background-image: linear-gradient(rgb(180, 141, 166),rgb(178, 178, 178));
+                border-radius: 0px 0px 45px 45px  !important;
+                border-top: 1px solid rgb(58, 51, 51);}
+            .card-body
+            {
+                background-image: linear-gradient(rgb(254, 152, 169),rgb(180, 141, 166));
+            }
+            .bi-suit-heart
+            {   
+                color: rgb(232, 7, 44);
+            }
+            .form-group 
+            {
+                position: relative;
+            }
+            .form-group i
+            {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                visibility: hidden;
+            }
+            .form-group small
+            {
+                color: #ff1900;
+                visibility: hidden;
+            }
+            .form-group.error small
+            {
+                visibility: visible;
+            }
+            .form-group.success i.fa-check-circle
+            {
+                color: #2ecc71;
+                visibility: visible;
+            }
+            .form-group.error i.fa-exclamation-circle
+            {
+                color: #ff1900;
+                visibility: visible;
+            }
+            .form-group input:focus {
+                outline: opx !important;
+                border-color: 2px solid rgb(58, 51, 51) !important;
+            }
+            .form-group.success input
+            {
+                border: #2ecc71;
+            }
+            .form-group.error input
+            {
+                border-color: #ff1900;
+            }
+            
+    </style>
+</head>
+<body>
+
+    <!-- main div -->
+
+    <div id="main">
+        <div class="container">
+
+            <div class="CARD_CARD card text-center w-50 col-lg-12 col-md-12 col-sm-12">
+                <div class="card-header fs-4">
+                    Love Calculator
+                </div>
+                <div class="card-body">
+                  <form class=" w-75 mx-auto" id="form">
+                      <div class="form-group">
+                          <input class="form-control text-center" type="text" placeholder="Enter Your Name" id="yourname">
+                          <i class="fas fa-check-circle"></i>
+                          <i class="fas fa-exclamation-circle"></i>
+                          <small id=" ">erro msgs</small>
+
+                      </div>
+                      <div class="mt-2 mb-2">
+                          <span><i class="bi bi-suit-heart fs-2"></i></span>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control text-center" type="text" placeholder="Enter Your Lover Name" id="lovername">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>erro msgs</small>
+                    </div>
+                    </form>
+                    <div>
+                        <input type="submit" class="btn btn-dark" onclick="checkloveper()">  
+                    </div>
+                    <div>
+                        <input type="text" id="loveValue" placeholder="Your Love %" class="form-control w-50 mx-auto text-center mt-3   ">
+                    </div>
+                </div>
+                <div class="card-footer">
+                  <p id="loveLine">Relation Line</p>
+                </div>
+              </div>
+        </div>
+    </div>
+   
+    <script type="text/javascript">
+
+        function checkloveper()
+        {
+            const loveData = Math.floor(Math.random() * 100);
+            document.getElementById("loveValue").value = loveData + "%"
+            if( loveData >= 80)
+            document.getElementById("loveLine").innerHTML = "Allah Pak Jodi Salaamt Rakhya"
+            else if ( loveData >= 60)
+            document.getElementById("loveLine").innerHTML = "God Bless Your Relationship"
+            else if ( loveData >= 50)
+            document.getElementById("loveLine").innerHTML = "Hope full Happy Relationship"
+            else if ( loveData >= 30)
+            document.getElementById("loveLine").innerHTML = "Kindly Love Your Lover And Never Angry Him/her"
+            else if ( loveData >= 20)
+            document.getElementById("loveLine").innerHTML = "Koshish Krna Waloon Ki Kbhi Haar Nhi Hoti"
+
+            else  document.getElementById("loveLine").innerHTML = "Tera Kuch Nhi Ban Sakda Kaliya"
+        };
+
+    </script>
+
+
+
+    
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/js/bootstrap.js.map">
+</body>
+</html>
